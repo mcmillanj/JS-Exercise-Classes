@@ -63,8 +63,10 @@ poop()
     return `${this.name}, ${this.age}`;
   }
 
-
 }
+
+const june = new Person("june", 30);
+const Mary = new Person('Mary', 50)
 
 /*
   TASK 2
@@ -81,6 +83,12 @@ poop()
 */
 
 class Car {
+  constructor(model, milesPerGallon){
+    this.model = model;
+    this.milesPerGallon = milesPerGallon;
+    this.tank = 0;
+    this.odometer = 0;
+  }
   
 }
 
