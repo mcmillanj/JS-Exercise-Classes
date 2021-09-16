@@ -83,11 +83,12 @@ const Mary = new Person('Mary', 50)
 */
 
 class Car {
-  constructor(model, milesPerGallon){
+  constructor(model, milesPerGallon)
+  {
     this.model = model;
-    this.milesPerGallon = milesPerGallon;
+     this.milesPerGallon = milesPerGallon;
     this.tank = 0;
-    this.odometer = 0;
+      this.odometer = 0;
   }
   fill(gallons)
   {
@@ -96,12 +97,12 @@ class Car {
   }
   drive(distance)
   {
-const mileDriven = this.tank * this.milesPerGallon;
-    if (distance < mileDriven)
+ const mileDriven = this.tank * this.milesPerGallon;
+    if (distance <= mileDriven)
     {
       this.tank = this.tank - (distance / this.milesPerGallon)
-    this.odometer = this.odometer += this.distance;
-    }
+    this.odometer = this.odometer += distance; //this.distance
+    }                               
     else 
     {
       this.odometer = this.odometer += mileDriven;
